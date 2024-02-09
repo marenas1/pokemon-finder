@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="icons/pika.png">
+</head>
+
+
+
+<body class="bg-body-tertiary">
+  <div class="headerSection" >
+    <h1 style="color: black;text-align: center;">Pokemon Finder</h1>
+    <h5 style="color: black;width: 70%;margin: auto;">Want to find out which pokemon is right for you? Look no further, Pokemon Finder guarantees that they 
+    will find you perfect match. Customize the search using Generations and Types to find your perfect poke pal and their info.</h5>
+    <hr>
+  </div>
+      
+    <!--Search Bar-->
+    <nav class="navbar bg-body-tertiary" >
+        <div class="container-fluid">
+          <form class="d-flex" role="search" style="margin: auto;">
+            <input id="pokeSearch" class="form-control me-2" type="search" placeholder="Pokemon Name" aria-label="Search">
+            <button id="pokemonSearchBtn" class="btn btn-outline-success" type="button">Search</button>
+            <!--This button used to be of type submit which refreshed the page. having it as jsut a button allows it to work-->
+          </form>
+        </div>
+    </nav>
+    <div style="width: 70%; display: flex;justify-content: space-around;margin: auto;">
+      <div  id="genDrop"  class="dropdown">
+        <button id="genBtn" class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Pokemon Generations</button>
+        <ul class="dropdown-menu">
+          
+          <li><a class="dropdown-item" id="allGenButton" >All Gens</a></li>
+          <li><a class="dropdown-item" id="gen1Button" >Gen 1</a></li>
+          <li><a class="dropdown-item" id="gen2Button" >Gen 2</a></li>
+          <li><a class="dropdown-item" id="gen3Button" >Gen 3</a></li>
+          <li><a class="dropdown-item" id="gen4Button" >Gen 4</a></li>
+          <li><a class="dropdown-item" id="gen5Button" >Gen 5</a></li>
+          <li><a class="dropdown-item" id="gen6Button" >Gen 6</a></li>
+          <li><a class="dropdown-item" id="gen7Button" >Gen 7</a></li>
+          <li><a class="dropdown-item" id="gen8Button" >Gen 8</a></li>
+          <li><a class="dropdown-item" id="gen9Button" >Gen 9</a></li>
+        </ul>
+      </div>
+      
+      <div id="typeDrop" class="dropdown">
+        <button id="typeBtn" class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Pokemon Type
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" id="allTypes">All</a></li>
+          <li><a class="dropdown-item" id="bugType">Bug</a></li>
+          <li><a class="dropdown-item" id="darkType">Dark</a></li>
+          <li><a class="dropdown-item" id="dragonType">Dragon</a></li>
+          <li><a class="dropdown-item" id="electricType">Electric</a></li>
+          <li><a class="dropdown-item" id="fairyType">Fairy</a></li>
+          <li><a class="dropdown-item" id="fightingType">Fighting</a></li>
+          <li><a class="dropdown-item" id="fireType">Fire</a></li>
+          <li><a class="dropdown-item" id="flyingType">Flying</a></li>
+          <li><a class="dropdown-item" id="ghostType">Ghost</a></li>
+          <li><a class="dropdown-item" id="grassType">Grass</a></li>
+          <li><a class="dropdown-item" id="groundType">Ground</a></li>
+          <li><a class="dropdown-item" id="iceType">Ice</a></li>
+          <li><a class="dropdown-item" id="normalType">Normal</a></li>
+          <li><a class="dropdown-item" id="poisonType">Poison</a></li>
+          <li><a class="dropdown-item" id="psychicType">Psychic</a></li>
+          <li><a class="dropdown-item" id="rockType">Rock</a></li>
+          <li><a class="dropdown-item" id="steelType">Steel</a></li>
+          <li><a class="dropdown-item" id="waterType">Water</a></li>
+        </ul>
+      </div>
+    
+      
+    </div>
+   
+   
+    
+  <br>
+  <div style="background-color: rgb(70, 138, 70);">
+    <div class="container">
+      <h1>Your Pokedex</h1>
+      <ul id="pokedex"></ul>
+    </div>
+  </div>
+  <!--Example Searches-->
+  <div style="background-color: rgb(221, 120, 52);">
+    <div class="container">
+      <h1>Example Pokedex</h1>
+      <h5 class="card-title" style="text-align: center;">(Gen 1/ Fairy)</h5><br>
+      <ul id="pokedexExample"></ul>
+    </div>
+  </div>
+    
+    
+  
+
+  
+
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item">
+        <a href="#" class="nav-link px-2 text-body-secondary">Back To Top</a>
+      </li>  
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Pokemon Finder Matthew Arenas</p>
+
+  </footer>
+  
+    
+  
+    <!--Runs js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
