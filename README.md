@@ -9,6 +9,6 @@ Using:**HTML,CSS,JS,Bootstrap**
 
 ## Features
 
-- [ ] Fully Responsive, adapts to any screen size
+- [ ] Fully Responsive, adapts to any screen size.
 - [ ] Interactive image gallery which displays pokemon stats with animation.
 
